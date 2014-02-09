@@ -1,6 +1,8 @@
 heroku-foundation
 =================
 
+## Warning! This repo is not quite ready for primetime - there are some issues when it's deployed to Heroku, and these need to be fixed.
+
 Prototype fast, and deploy to Heroku for feedback and staging! This is the internal repo we use at [Hanno](http://wearehanno.com/) for rapid prototyping.
 
 

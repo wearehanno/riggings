@@ -2,6 +2,8 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
+ruby "2.0.0"
+
 gem "middleman"
 
 # Live-reloading plugin
@@ -14,3 +16,7 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 platforms :mri_18 do
   gem "ruby18_source_location"
 end
+
+# For Heroku static site serving
+gem "rack-contrib"
+gem "puma"

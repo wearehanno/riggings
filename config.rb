@@ -2,35 +2,6 @@
 # Compass
 ###
 
-compass_config do |config|
-  # Require any additional compass plugins here.
-  config.add_import_path "bower_components/foundation/scss"
-  
-  # Set this to the root of your project when deployed:
-  config.http_path = "/"
-  config.css_dir = "stylesheets"
-  config.sass_dir = "stylesheets"
-  config.images_dir = "images"
-  config.javascripts_dir = "javascripts"
-
-  # You can select your preferred output style here (can be overridden via the command line):
-  # output_style = :expanded or :nested or :compact or :compressed
-
-  # To enable relative paths to assets via compass helper functions. Uncomment:
-  # relative_assets = true
-
-  # To disable debugging comments that display the original location of your selectors. Uncomment:
-  # line_comments = false
-
-
-  # If you prefer the indented syntax, you might want to regenerate this
-  # project again passing --syntax sass, or you can uncomment this:
-  # preferred_syntax = :sass
-  # and then run:
-  # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-
-end
-
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
@@ -65,28 +36,31 @@ end
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-# Add bower's directory to sprockets asset path
-after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+helpers do
+  def some_helper
+    "Helping"
+  end
 end
 
-set :css_dir, 'stylesheets'
+# Using these next 2 lines for Heroku config
+activate :directory_indexes
+set :build_dir, "tmp"
 
-set :js_dir, 'javascripts'
+set :css_dir, 'assets/css'
 
-set :images_dir, 'images'
+set :js_dir, 'assets/javascripts'
 
-activate :livereload
+set :images_dir, 'assets/images'
+
+# Change Compass configuration
+# config :development do
+#   compass_config do |config|
+#     config.sass_options = {:debug_info =&gt; true}
+#   end
+# end
 
 # Build-specific configuration
 configure :build do
@@ -105,3 +79,5 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+I18n.enforce_available_locales = false

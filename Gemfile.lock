@@ -64,7 +64,11 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.2)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.15)
       rack
     rack-test (0.6.2)
@@ -98,5 +102,7 @@ PLATFORMS
 DEPENDENCIES
   middleman
   middleman-livereload
+  puma
+  rack-contrib
   ruby18_source_location
   wdm (~> 0.1.0)

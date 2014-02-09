@@ -1,0 +1,16 @@
+# Some sample, reference data
+
+- type: car
+  name: Ford Focus
+  expiry: 2014.12.5
+  status: Active
+
+- type: train
+  name: Cross Country
+  expiry: 2014.12.5
+  status: Active
+
+- type: plane
+  name: Boeing 747
+  expiry: 2014.12.5
+  status: Active

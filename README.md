@@ -6,12 +6,11 @@ Prototype fast, and deploy to Heroku for feedback and staging! This is the inter
 
 ## What's included?
 
-1. Middleman prototyping setup
-2. [Zurb Foundation](http://foundation.zurb.com/) Sass, via [Bower](http://bower.io/), for fast prototyping
-3. [Heroku](http://heroku.com) configuration, via [Puma](http://puma.io/), for fast staging server setup. Includes simple http auth, to keep things private
-4. [Wercker](http://wercker.com/), for CI testing and automated deployment to Heroku
-5. [HipChat](http://hipchat.con) configuration, from Wercker, to post notifications to your project room on HipChat when a build is attempted.
-6. [BugHerd](http://www.bugherd.com/) for feedback collection, connected 
+1. Middleman prototyping setup using [Zurb Foundation](http://foundation.zurb.com/) Sass, via [Bower](http://bower.io/)
+2. [Heroku](http://heroku.com) configuration, via [Puma](http://puma.io/), for fast staging server setup. Includes simple http auth, to keep things private
+3. [Wercker](http://wercker.com/), for CI testing and automated deployment to Heroku
+4. [HipChat](http://hipchat.con) configuration, from Wercker, to post notifications to your project room on HipChat when a build is attempted.
+5. [BugHerd](http://www.bugherd.com/) for feedback collection, connected 
 
 
 ## Step 1: install the app locally
@@ -45,6 +44,7 @@ The first person in the team to build the app, needs to set it up on Heroku. If 
 1. Make sure you have the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 2. `$ cd` to this repository
 3. **Either** `$ heroku apps:create my_new_project` if you're creating the project for the first time, or `git@heroku.com:my_new_project.git` if you're joining an existing app.
+4. Update the `Rack::Auth::Basic` configuration in `config.ru` to set a different username and password for the auth.
 
 If you're not planning to use Wercker, at this point, you could just deploy the app manually by pushing to Heroku using `$ git push heroku master`
 

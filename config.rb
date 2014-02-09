@@ -9,10 +9,10 @@ compass_config do |config|
 
   # Set this to the root of your project when deployed:
   config.http_path = "/"
-  config.css_dir = "stylesheets"
-  config.sass_dir = "stylesheets"
-  config.images_dir = "images"
-  config.javascripts_dir = "javascripts"
+  config.css_dir = "assets/stylesheets"
+  config.sass_dir = "assets/stylesheets"
+  config.images_dir = "assets/images"
+  config.javascripts_dir = "assets/javascripts"
 end
 
 ###
@@ -66,9 +66,9 @@ end
 activate :directory_indexes
 set :build_dir, "tmp"
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
 activate :livereload
 
 # Build-specific configuration

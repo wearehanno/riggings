@@ -11,7 +11,7 @@
 /vendor
 
 # Ignore the build directory
-/build
+/tmp
 
 # Ignore Sass' cache
 /.sass-cache

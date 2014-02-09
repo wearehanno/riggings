@@ -3,9 +3,17 @@
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  # Require any additional compass plugins here.
+  config.add_import_path "bower_components/foundation/scss"
+
+  # Set this to the root of your project when deployed:
+  config.http_path = "/"
+  config.css_dir = "stylesheets"
+  config.sass_dir = "stylesheets"
+  config.images_dir = "images"
+  config.javascripts_dir = "javascripts"
+end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -35,9 +43,6 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Reload the browser automatically whenever files change
-activate :livereload
-
 # Methods defined in the helpers block are available in templates
 helpers do
   def some_helper
@@ -46,21 +51,25 @@ helpers do
 end
 
 # Using these next 2 lines for Heroku config
+# activate :directory_indexes
+# set :build_dir, "tmp"
+# set :css_dir, 'assets/css'
+# set :js_dir, 'assets/javascripts'
+# set :images_dir, 'assets/images'
+
+# Add bower's directory to sprockets asset path
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
 activate :directory_indexes
 set :build_dir, "tmp"
 
-set :css_dir, 'assets/css'
-
-set :js_dir, 'assets/javascripts'
-
-set :images_dir, 'assets/images'
-
-# Change Compass configuration
-# config :development do
-#   compass_config do |config|
-#     config.sass_options = {:debug_info =&gt; true}
-#   end
-# end
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+activate :livereload
 
 # Build-specific configuration
 configure :build do
@@ -79,5 +88,3 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-
-I18n.enforce_available_locales = false

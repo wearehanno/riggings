@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 ruby "2.0.0"
 
-gem "middleman"
+gem "middleman", "3.2.2"
 
 # Live-reloading plugin
 gem "middleman-livereload"

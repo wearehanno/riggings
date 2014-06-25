@@ -12,7 +12,7 @@ Prototype fast, and deploy to Heroku for feedback and staging! This is the inter
 2. [Heroku](http://heroku.com) configuration, via [Puma](http://puma.io/), for fast staging server setup. Includes simple http auth, to keep things private
 3. [Wercker](http://wercker.com/), for CI testing and automated deployment to Heroku
 4. [HipChat](http://hipchat.con) configuration, from Wercker, to post notifications to your project room on HipChat when a build is attempted.
-5. [BugHerd](http://www.bugherd.com/) for feedback collection, connected 
+5. [BugHerd](http://www.bugherd.com/) for feedback collection, connected
 
 
 ## Step 1: install the app locally
@@ -31,9 +31,10 @@ Then create a new project using zurb-foundation template.
 
 1. `$ middleman init my_new_project --template=heroku-foundation`
 2. `$ cd my_new_project`
-3. `$ bower install` to install web package dependencies for the project
-4. `$ bundle` to install Ruby gems (including Middleman)
-4. `$ middleman s` to start the Middleman server 
+3. `$ rm -rf -- .git` to delete the template's git repo, which is copied into this repo too, and you won't want it
+4. `$ bower install` to install web package dependencies for the project
+5. `$ bundle` to install Ruby gems (including Middleman)
+6. `$ middleman s` to start the Middleman server
 
 You'll then be able to see the site at [localhost:4567](http://localhost:4567). For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/).
 

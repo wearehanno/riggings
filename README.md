@@ -1,17 +1,15 @@
 heroku-foundation
 =================
 
-## Warning! This repo is not quite ready for primetime - there are some issues when it's deployed to Heroku, and these need to be fixed.
-
-Prototype fast, and deploy to Heroku for feedback and staging! This is the internal repo we use at [Hanno](http://wearehanno.com/) for rapid prototyping.
+Prototype fast, and deploy to Heroku for feedback and staging! This is the internal repo we use at [Hanno](http://hanno.co/) for rapid prototyping.
 
 
 ## What's included?
 
 1. Middleman prototyping setup using [Zurb Foundation](http://foundation.zurb.com/) Sass, via [Bower](http://bower.io/)
-2. [Heroku](http://heroku.com) configuration, via [Puma](http://puma.io/), for fast staging server setup. Includes simple http auth, to keep things private
-3. [Wercker](http://wercker.com/), for CI testing and automated deployment to Heroku
-4. [HipChat](http://hipchat.con) configuration, from Wercker, to post notifications to your project room on HipChat when a build is attempted.
+2. [Heroku](http://heroku.com) configuration, via [Puma](http://puma.io/), for fast staging server setup. Includes simple http auth, to keep things private.
+3. [CodeShip](http://codeship.io/), for CI testing and automated deployment to Heroku
+4. [Slack](http://slack.com) configuration, from Wercker, to post notifications to your project room on Slack when a build is attempted.
 5. [BugHerd](http://www.bugherd.com/) for feedback collection, connected
 
 
@@ -42,7 +40,7 @@ You'll then be able to see the site at [localhost:4567](http://localhost:4567). 
 
 ## Step 2: Set up the app on Heroku
 
-The first person in the team to build the app, needs to set it up on Heroku. If you're not the first, and have been added as a collaborator, please watch out for step 3, below:
+The first person in the team to build the app needs to set it up on Heroku. If you're not the first, and have been added as a collaborator but need to alter the Heroku settings, please watch out for step 3, below:
 
 1. Make sure you have the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 2. `$ cd` to this repository
@@ -54,35 +52,24 @@ If you're not planning to use Wercker, at this point, you could just deploy the 
 Your app will be visible at `http://my_new_project.herokuapp.com`
 
 
-## Step 3: Configure Wercker
+## Step 3: Configure CodeShip
 
-You can just manually deploy using `git push` to Heroku, but we're using Wercker to streamline the process and make sure nobody breaks the build accidentally.
+You can just manually deploy using `git push` to Heroku, but we're not doing this, and instead, we'll use CodeShip to streamline the process and make sure nobody breaks the build accidentally.
 
-**TODO: Add setup instructions for Wercker**
+**TODO: Add setup instructions for CodeShip**
 
 
 ## Step 4: Configure notifications and connectors
 
-Keep clients and team members updated at every step of the process. We use HipChat massively, and pipe lots of notifications into a project room where our team and clients can discuss things.
+Keep clients and team members updated at every step of the process. We use Slack massively, and pipe lots of notifications into a project room where our team and clients can discuss things.
 
+### Add Slack connections
 
-### Heroku to HipChat
+Configure the following inside Slack > Configure Integrations:
 
-First, configure deployment notifications for Heroku deploys, with the HipChat API token, and the ID of the room you wish to post to:
-
-    $ heroku addons:add deployhooks:hipchat \
-    --auth_token=YOUR_TOKEN_HERE \
-   	 --room="YOUR_ROOM_HERE"
-
-
-### GitHub to HipChat
-
-Go to: `https://github.com/yourusername/myreponame/settings/hooks`
-
-* **Auth Token**: Set to YOUR_TOKEN_HERE
-* **Room**: YOUR_ROOM_HERE
-* **Active**: Tick this
-
+* Heroku > Slack
+* GitHub > Slack (if desired)
+* CodeShip > Slack
 
 ### GitHub to BugHerd
 
@@ -91,15 +78,6 @@ Go to: `https://github.com/yourusername/myreponame/settings/hooks`
 * Copy and paste the key from your project settins, adding it to the Project Key field in your GitHub project under **Admin > Service Hooks > BugHerd**.
 * Also, tick the Active box
 * And then click **Update Settings**.
-
-
-### Wercker to HipChat
-
-- Add a new pipeline variable called HIPCHAT_TOKEN
-- Protect it, for security
-- Set the value as `YOUR_TOKEN_HERE`
-- Ensure `Wercker.yml` in the repo has the room ID set, so Wercker knows where to post notifications
-
 
 # Credits
 

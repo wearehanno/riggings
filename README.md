@@ -58,14 +58,14 @@ First, visit [codeship.io](https://codeship.io), login, and click to create a ne
 
 First, we need to set up the CodeShip server before running tests. We use a few commands to load dependencies. Enter the following **setup commands**:
 
-    $ rvm use 2.0.0
-    $ bundle install
-    $ npm install -g bower
-    $ bower install
+    rvm use 2.0.0
+    bundle install
+    npm install -g bower
+    bower install
 
 Now, we need to specify the commands that run our test suite. We'll just do a simple Middleman build for now, but we could add better integration testing later on if we wanted to. Enter the following **test commands**:
 
-    $ bundle exec middleman build
+    bundle exec middleman build
 
 Next, save your project, and push to the GitHub repo to trigger a build and make sure it's being correctly built, showing up as a green build. If it fails, you've got an issue, because the tests should all pass on the clean scaffolding repo.
 

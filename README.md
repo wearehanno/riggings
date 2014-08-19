@@ -22,11 +22,11 @@ Software installation, before we can dig into the repo:
 
 Clone this repo into `~/.middleman` (you'll have to create this directory if it's not already there). You can then use it with the `--template` flag on `middleman init`.
 
-`$ git clone git://github.com/wearehanno/heroku-foundation.git ~/.middleman/heroku-foundation`
+`$ git clone git://github.com/wearehanno/riggings.git ~/.middleman/riggings`
 
 Then create a new project using zurb-foundation template.
 
-1. `$ middleman init my_new_project --template=heroku-foundation`
+1. `$ middleman init my_new_project --template=riggings`
 2. `$ cd my_new_project`
 3. `$ rm -rf -- .git` to delete the template's git repo, which is copied into this repo too, and you won't want it
 4. `$ bower install` to install web package dependencies for the project

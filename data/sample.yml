@@ -1,16 +1,17 @@
 # Some sample, reference data
 
-- type: car
-  name: Ford Focus
+- type: warfare
+  name: Longship
+  expiry: 2014.12.5
+  status: Active
+  notes: Excellent for pillaging
+
+- type: leisure
+  name: Cruise Ship
   expiry: 2014.12.5
   status: Active
 
-- type: train
-  name: Cross Country
-  expiry: 2014.12.5
-  status: Active
-
-- type: plane
-  name: Boeing 747
+- type: leisure
+  name: Banana Boat
   expiry: 2014.12.5
   status: Active

@@ -1,31 +1,14 @@
-@import "settings";
-@import "foundation.scss";
+// TODO: PICKFRAMEWORK: Choose the one you want and comment/delete the other one
+// =======================================
+// Foundation
+@import "settings"; // Remove this file if you remove Foundation
+@import "foundation.scss"; // This is being pulled from the bower_components
+
+// Bootstrao
+// $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// @import "stylesheets/bootstrap.scss";
 
 
-header {
-  @include grid-row;
-
-  .logo  { @include grid-column($columns:3, $center:true); }
-  padding-bottom: em-calc(10px);
-
-}
-
-
-.main-content {
-  @include grid-row;
-
-  aside  {
-    @include grid-column($columns:6);
-    // @media #{$medium-up} {
-    //   @include grid-column($columns:3);
-    // }
-  }
-
-  article  {
-    @include grid-column($columns:6);
-    // @media #{$medium-up} {
-    //   @include grid-column($columns:8, $offset: 1);
-    // }
-  }
-
-}
+// THE REST OF IT
+// Now on to the other bits
+// =======================================

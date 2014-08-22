@@ -6,10 +6,9 @@ Prototype fast, and deploy to a server for feedback and staging! This is the int
 
 ##What's included?
 
-1. Middleman prototyping setup using [Zurb Foundation](http://foundation.zurb.com/) Sass, via [Bower](http://bower.io/)
+1. Middleman prototyping setup using [Zurb Foundation](http://foundation.zurb.com/) Sass, via [Bower](http://bower.io/). Bootstrap is available as an alternative - just scroll down this README to the PICKFRAMEWORK section)
 3. [CodeShip](http://codeship.io/), for CI testing and automated deployment to our server
 4. [Slack](http://slack.com) configuration sensible preferences, to keep the team updated.
-5. [BugHerd](http://www.bugherd.com/) for feedback collection.
 
 
 ##Step 1: install the app locally
@@ -122,13 +121,27 @@ Configure the following inside Slack > Configure Integrations:
 * GitHub > Slack (if desired)
 * CodeShip > Slack
 
-### GitHub to BugHerd
 
-Go to: `https://github.com/yourusername/myreponame/settings/hooks`
+# PICKFRAMEWORK: Want to use Bootstrap instead of Foundation?
 
-* Copy and paste the key from your project settins, adding it to the Project Key field in your GitHub project under **Admin > Service Hooks > BugHerd**.
-* Also, tick the Active box
-* And then click **Update Settings**.
+Yup, we feel that way sometimes, too. It's set up for foundation but you should be easily able to port over, though.
+
+Search in this repo for PICKFRAMEWORK. There are sections in X files, which you'll need to modify:
+
+1. In `bower.json`, choose the framework you need and copy it into the dependencies
+2. In `config.rb` adjust the `config.add_import_path`
+3. In `all.js` change the framework JS file being included
+4. In `app.js` remove the Foundation initialisation at `$(document).foundation();`
+5. In `app.css.scss`, there are a few lines at the top to import the Sass components
+6. In `layout.erb` there's a call to Modernizr, which we don't need for Bootstrap
+
+Then, when you're done, we need to change the framework via Bower:
+
+    $ bower prune # To remove the unused bower components
+    $ bower install # To install the new ones
+
+Update the `source/layouts/layout.erb` file and other pages like `source/index.html.erb` to remove the Foundation-specific code.
+
 
 # Credits
 

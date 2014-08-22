@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "The Middleman" %></title>
+    <title><%= data.page.title || "TODO: The Middleman" %></title>
 
     <%= stylesheet_link_tag "app" %>
+
+    <!-- TODO: PICKFRAMEWORK: Remove Modernizr if you want to use Bootstrap instead of Foundation -->
     <%= javascript_include_tag "modernizr" %>
   </head>
 

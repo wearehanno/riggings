@@ -1,6 +1,8 @@
 The Riggings
 =================
 
+[ ![Codeship Status for wearehanno/riggings](https://codeship.io/projects/62ff1160-09e4-0132-177d-4af473c3e2ac/status?branch=master)](https://codeship.io/projects/31635)
+
 Prototype fast, and deploy to a server for feedback and staging! This is the internal repo we use at [Hanno](http://hanno.co/) for rapid prototyping.
 
 
@@ -57,7 +59,7 @@ First, visit [codeship.io](https://codeship.io), login, and click to create a ne
 
 First, we need to set up the CodeShip server before running tests. We use a few commands to load dependencies. Enter the following **setup commands**:
 
-    rvm use 2.0.0
+    rvm use 2.1.0
     bundle install
     npm install -g bower
     bower install

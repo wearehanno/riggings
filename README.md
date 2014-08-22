@@ -122,11 +122,11 @@ Configure the following inside Slack > Configure Integrations:
 * CodeShip > Slack
 
 
-# PICKFRAMEWORK: Want to use Bootstrap instead of Foundation?
+## Step 7: Picking a Framework (Bootstrap vs Foundation)
 
-Yup, we feel that way sometimes, too. It's set up for foundation but you should be easily able to port over, though.
+Yup, we feel that way sometimes, too. Riggings is set up for Foundation but can easily be switched to Bootstrap.
 
-Search in this repo for PICKFRAMEWORK. There are sections in X files, which you'll need to modify:
+Search in this repo for PICKFRAMEWORK. There are sections in 6 files, which you'll need to modify. Even if you want to stick with Foundation, you should still follow these steps just to remove the Bootstrap references so that you have a clean repository:
 
 1. In `bower.json`, choose the framework you need and copy it into the dependencies
 2. In `config.rb` adjust the `config.add_import_path`
@@ -140,9 +140,4 @@ Then, when you're done, we need to change the framework via Bower:
     $ bower prune # To remove the unused bower components
     $ bower install # To install the new ones
 
-Update the `source/layouts/layout.erb` file and other pages like `source/index.html.erb` to remove the Foundation-specific code.
-
-
-# Credits
-
-Foundation and Bower setup was originally based on the [middleman-zurb-foundation](https://github.com/axyz/middleman-zurb-foundation) template.
+And finally, update the `source/layouts/layout.erb` file and other pages like `source/index.html.erb` to remove the Foundation-specific HTML grid and components.

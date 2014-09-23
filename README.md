@@ -101,13 +101,19 @@ Next, click to go to **Next Steps** in CodeShip.
 
 Here’s an example to deploy to Hanno staging:
 
-    scp -rp ~/clone/tmp/* username@serveriphere:/home/hanno/public_html/xxxx/public_html/
+    scp -rpC ~/clone/tmp/ username@serverip:/home/username/public_html/xxxx/
+    
+    # Now rewrite the folder names to replace the existing public_html
+    ssh username@serverip 'mv /home/username/public_html/xxxx/public_html /home/username/public_html/xxxx/old_public_html'
+    ssh username@serverip 'mv /home/username/public_html/xxxx/tmp /home/username/public_html/xxxx/public_html'
+    ssh username@serverip 'rm -rf /home/username/public_html/xxxx/old_public_html'
+    
 
 ###Later on, you can set up the Production deployment too
 
 Here's an example $script for deploying to a DO box containing a client site:
 
-    scp -rp ~/clone/tmp/* root@111.111.111.111:/var/www/xxxx.com
+    scp -rp ~/clone/tmp/ root@111.111.111.111:/var/www/xxxx.com
 
 This would be added to the master branch settings on CodeShip, so that when you save, CodeShip will run the command on your next master branch push.
 

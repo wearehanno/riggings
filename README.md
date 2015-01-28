@@ -113,7 +113,7 @@ Here’s an example to deploy to Hanno staging:
 
 Here's an example $script for deploying to a DO box containing a client site:
 
-    scp -rp ~/clone/tmp/ root@111.111.111.111:/var/www/xxxx.com
+    scp -rpC ~/clone/tmp/ root@111.111.111.111:/var/www/xxxx.com
 
 This would be added to the master branch settings on CodeShip, so that when you save, CodeShip will run the command on your next master branch push.
 

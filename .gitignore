@@ -21,5 +21,6 @@
 *.esproj
 *.sublime-*
 
-# Ignore bower_components
+# Ignore bower_components and node modules
 /source/bower_components
+node_modules

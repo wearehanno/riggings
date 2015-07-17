@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "private": "true",
   "TODO PICKFRAMEWORK": {
-  	"Take one of the next 2 lines": "and add it to the 'dependencies' list immediately below, depending on which one you want to use",
-    "foundation": "zurb/bower-foundation#5.3.3",
-	"bootstrap-sass-official": "~3.2.0"
+    "Take one of the next 2 lines": "and add it to the 'dependencies' list immediately below, depending on which one you want to use",
+    "foundation": "zurb/bower-foundation#5.4.7",
+    "bootstrap-sass-official": "~3.2.0"
   },
   "dependencies": {
-    "foundation": "zurb/bower-foundation#5.3.3"
+    "foundation": "zurb/bower-foundation#5.4.7"
   }
 }

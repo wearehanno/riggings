@@ -1,0 +1,10 @@
+{
+  "name": "riggings",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.5.2"
+  }
+}

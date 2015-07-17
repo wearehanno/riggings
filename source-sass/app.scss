@@ -2,12 +2,12 @@
 // =======================================
 // Foundation
 @import "settings"; // Remove this file if you remove Foundation
-@import "foundation.scss"; // This is being pulled from the bower_components
+@import "source/bower_components/foundation/scss/foundation.scss"; // This is being pulled from the bower_components
+@import "source/bower_components/foundation/scss/normalize.scss";
 
 // Bootstrao
 // $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // @import "stylesheets/bootstrap.scss";
-
 
 // THE REST OF IT
 // Now on to the other bits

@@ -8,7 +8,7 @@ compass_config do |config|
 
   # TODO: PICKFRAMEWORK: Choose the one you want, and comment out the other one
   # Foundation
-  config.add_import_path "bower_components/foundation/scss"
+  config.add_import_path "bower_components"
   # Bootstrap
   # config.add_import_path "bower_components/bootstrap-sass-official/assets"
 
@@ -75,7 +75,16 @@ set :build_dir, "tmp"
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
-activate :livereload
+
+configure :development do
+  activate :livereload
+  config[:file_watcher_ignore] += [
+    /bower_components\//,
+    /node_modules\//,
+    /images\//,
+    /source-sass\//
+    ]
+end
 
 # Build-specific configuration
 configure :build do
@@ -86,7 +95,9 @@ configure :build do
   # activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash do |config|
+    config.ignore = ['assets/stylesheets/app.css']
+  end
 
   # Use relative URLs
   # activate :relative_assets

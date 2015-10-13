@@ -1,2 +1,2 @@
 // PICKFRAMEWORK: Remove this if you're not using Foundation
-//= require modernizr/modernizr
+//= require foundation/js/vendor/modernizr

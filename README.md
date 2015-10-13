@@ -17,7 +17,7 @@ Prototype fast, and deploy to a server for feedback and staging! This is the int
 
 Install these things on your machine:
 
-1. Install a [Ruby](http://www.ruby-lang.org/en/downloads/) version via RVM. We're using 2.1.0
+1. Install a [Ruby](http://www.ruby-lang.org/en/downloads/) version via RVM. We're using 2.2.1
 2. Install [Bundler](http://bundler.io/)
 3. Install [Bower](http://bower.io/) (`$ npm install -g bower`)
 
@@ -70,7 +70,7 @@ First, visit [codeship.io](https://codeship.io), login, and click to create a ne
 
 We use a few commands to load dependencies and get the Codeship build server configured:
 
-	rvm use 2.1.0
+	rvm use 2.2.1
 	bundle install
 	npm install -g bower
 	npm install -g gulp

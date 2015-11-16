@@ -56,13 +56,6 @@ helpers do
   end
 end
 
-# Using these next 2 lines for Heroku config
-# activate :directory_indexes
-# set :build_dir, "tmp"
-# set :css_dir, 'assets/css'
-# set :js_dir, 'assets/javascripts'
-# set :images_dir, 'assets/images'
-
 # Add bower's directory to sprockets asset path
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
@@ -70,7 +63,7 @@ after_configuration do
 end
 
 activate :directory_indexes
-set :build_dir, "tmp"
+set :build_dir, "build"
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'

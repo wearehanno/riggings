@@ -3,29 +3,26 @@ The Riggings
 
 Prototype fast, and deploy to a server for feedback and staging! This is the internal repo we use at [Hanno](http://hanno.co/) for rapid prototyping using [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/) and hosted on [Netlify](https://www.netlify.com/).
 
-##Quickstart
+## Quickstart
 
-###Prerequisites:
+### Prerequisites:
 
-1. [Ruby](http://www.ruby-lang.org/en/downloads/) via [RVM](https://rvm.io/). Check our current version inside [`.ruby-version`](./.ruby-version)
+1. [Ruby](http://www.ruby-lang.org/en/downloads/) via [rbenv](https://github.com/sstephenson/rbenv). Check our current version inside [`.ruby-version`](./.ruby-version)
 2. [Bundler](http://bundler.io/): `gem install bundler`
 3. [Bower](http://bower.io/): `npm install -g bower`
 
-###Initialise the app
+### Initialise the app
 
 1. `bower install` to install web package dependencies for the project
-2. `bundle` to install Ruby gems (including Middleman)
-3. `npm install` to install the node packages we need for Gulp
-4. `npm install -g gulp` to get Gulp working
+2. `bundle install` to install Ruby gems (including Middleman)
 
 Then start the local server:
 
-1. `gulp` to build the CSS for the app. If you want to edit Sass, and have Middleman reload it for you, use `gulp watch` instead.
-2. `middleman s` to start the Middleman server
-3. Go to [localhost:4567](http://localhost:4567)
+1. `middleman s` to start the Middleman server
+2. Go to [http://192.168.0.4:4567/](http://192.168.0.4:4567/)
 
 
-##Deploying it to Netlify
+## Deploying it to Netlify
 
 We used to deploy this site to a regular Linux server, but it was too much hassle. Purpose built static site hosting services like [Netlify](https://www.netlify.com/) are a much better option.
 
@@ -35,15 +32,15 @@ We used to deploy this site to a regular Linux server, but it was too much hassl
 
 Feel free to set up a password to protect the build and give it a custom URL.
 
-_Netlify automatically looks for `package.json` files, `.gemfiles` and `bower.json`, so there's very little that we actually need to set up.  This build command will run the `build` and `prebuild` tasks configured in the [`package.json`](./package.json)._
+_Netlify automatically looks for `package.json` files, `.gemfiles` and `bower.json`, so there's very little that we actually need to set up.  This build command will run the `build` task configured in the [`package.json`](./package.json)._
 
 
-##Optionally, configure notifications and connectors
+## Optionally, configure notifications and connectors
 
 Keep clients and team members updated at every step of the process. We use Slack massively, and pipe lots of notifications into a project room where our team and clients can discuss things. Check out the [Netlify Webhooks documentation](https://www.netlify.com/docs/webhooks) for details.
 
 
-##Running Tests
+## Running Tests
 
 If you want to run tests before deploying to Netlify, you can use a CI server like [Travis](https://travis-ci.org). If you want to do ths, you'll need to run commands in this sort of sequence:
 
@@ -51,17 +48,14 @@ If you want to run tests before deploying to Netlify, you can use a CI server li
 	rvm use 2.2.1
 	bundle install
 	npm install -g bower
-	npm install -g gulp
-	npm install
 	bower install
-	
+
 	# Run the build to see if it works. Insert your tests here too
-	gulp dist
 	middleman build
 
-#Extra Stuff
+# Extra Stuff
 
-##Switching the frontend framework to Bootstrap
+## Switching the frontend framework to Bootstrap
 
 Yup, we feel that way sometimes, too. Riggings is set up for Foundation but can easily be switched to Bootstrap.
 
@@ -84,7 +78,7 @@ Then, when you're done, we need to change the framework via Bower:
 And finally, don't forget to update the `source/layouts/layout.erb` file and other pages like `source/index.html.erb` to remove the Foundation-specific HTML grid and components.
 
 
-##Using this repository as a Middleman template
+## Using this repository as a Middleman template
 
 If you're building lots of new projects with this repo, it'll be easiest if you turn it into a Middleman template. Here's how to do that:
 

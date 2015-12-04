@@ -49,6 +49,9 @@ end
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+# SassC compilation for styles
+activate :sassc
+
 # Methods defined in the helpers block are available in templates
 helpers do
   def some_helper
@@ -74,8 +77,7 @@ configure :development do
   config[:file_watcher_ignore] += [
     /bower_components\//,
     /node_modules\//,
-    /images\//,
-    /source-sass\//
+    /images\//
     ]
 end
 

@@ -60,14 +60,15 @@ helpers do
 end
 
 # Add bower's directory to sprockets asset path
+# TODO: Fix this up and get it working seamlessly
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
 
 activate :directory_indexes
-set :build_dir, "build"
 
+set :build_dir, "build"
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
@@ -83,16 +84,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  activate :asset_hash do |config|
-    config.ignore = ['assets/stylesheets/app.css']
-  end
+  # TODO: need to auto-prefix Sass on build
 
   # Use relative URLs
   # activate :relative_assets

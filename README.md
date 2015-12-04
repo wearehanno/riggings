@@ -66,7 +66,6 @@ Search in this repo for `PICKFRAMEWORK`. There are sections in 6 files, which yo
 3. In `all.js` change the framework JS file being included
 4. In `app.js` remove the Foundation initialisation at `$(document).foundation();`
 5. In `app.css.scss`, there are a few lines at the top to import the Sass components
-6. In `layout.erb` there's a call to Modernizr, which we don't need for Bootstrap
 
 Then, when you're done, we need to change the framework via Bower:
 

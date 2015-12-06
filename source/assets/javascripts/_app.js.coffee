@@ -3,3 +3,8 @@
 # out http://js2.coffee/ if you need to convert some javascript to coffeescript.
 
 # Other code goes below
+
+# Initialise Foundation
+$(document).foundation()
+
+console.log 'app.js loaded'

@@ -22,6 +22,24 @@ compass_config do |config|
   config.javascripts_dir = "assets/javascripts"
 end
 
+# SassC compilation for styles
+activate :sassc
+
+activate :directory_indexes
+
+# Add bower's directory to sprockets asset path
+# TODO: Fix this up and get it working seamlessly
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :fonts_dir,  "assets/fonts"
+set :images_dir, 'assets/images'
+
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -43,38 +61,12 @@ end
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+
 ###
-# Helpers
+# Environment and build settings
 ###
 
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
-# SassC compilation for styles
-activate :sassc
-
-# Methods defined in the helpers block are available in templates
-helpers do
-  def some_helper
-    "Helping"
-  end
-end
-
-# Add bower's directory to sprockets asset path
-# TODO: Fix this up and get it working seamlessly
-after_configuration do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  sprockets.append_path File.join "#{root}", @bower_config["directory"]
-end
-
-activate :directory_indexes
-
-set :build_dir, "build"
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :fonts_dir,  "assets/fonts"
-set :images_dir, 'assets/images'
-
+# Development settings
 configure :development do
   activate :livereload
   config[:file_watcher_ignore] += [
@@ -85,6 +77,8 @@ configure :development do
 end
 
 # Build-specific configuration
+set :build_dir, "build"
+
 configure :build do
   # TODO: need to auto-prefix Sass on build
 

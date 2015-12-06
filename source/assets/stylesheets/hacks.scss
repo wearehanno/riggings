@@ -1,2 +1,18 @@
 // This is where we drop WIP code while prototyping. It should be cleaned up
 // and removed once work is done.
+
+.hack-nav {
+
+  text-align: center;
+  margin-top: 1em;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 0.5em;
+  }
+
+  .active a {
+    text-decoration: underline;
+  }
+}

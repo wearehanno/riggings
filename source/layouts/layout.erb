@@ -9,6 +9,15 @@
   </head>
 
   <body class="<%= page_classes %>">
+
+    <nav class="hack-nav">
+      <%= link_to_page "Home", "/" %>
+      <%= link_to_page "About", "about" %>
+      <%= link_to_page "Contact", "contact" %>
+    </nav>
+
+    <hr>
+
     <%= yield %>
 
     <%= javascript_include_tag  "all" %>

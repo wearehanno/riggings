@@ -1,0 +1,73 @@
+@charset 'utf-8';
+
+// TODO: PICKFRAMEWORK: Choose the one you want and comment/delete the other one
+// =======================================
+
+// Get the Foundation settings. Wherever possible, you should change a setting this
+// way, rather than trying to override Foundation by writing extra CSS
+@import 'settings';
+
+// Get Foundation from the bower_components directory, which has been included
+// in the pipeline
+@import 'foundation-sites/scss/foundation.scss';
+
+// You may or may not want this. It brings an animation framework into Foundation
+// @import 'motion-ui/motion-ui';
+
+// Comment out any of the following Foundation elements that you don't actually need
+// For rapid prototyping purposes, we'll leave all of them enabled for now
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+// Commented out for now, but can be fixed and included if desired
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+
+// OTHER PLUGINS
+// Please try to use bower_components wherever you can, to keep things
+// maintainable
+// =======================================
+
+// This is being imported by the font-awesome-middleman gem
+@import "font-awesome";
+
+// ... Add your extra plugins here
+
+// REGULAR SETTINGS
+// These should be used regardless of which framework you pick
+// =======================================
+
+@import "hacks";

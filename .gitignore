@@ -24,6 +24,7 @@
 
 # Ignore bower_components and node modules
 /source/bower_components
+bower_components
 node_modules
 
 # We don't need to track the style, since it'll be compiled on each build--on the server, too

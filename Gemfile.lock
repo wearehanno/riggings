@@ -68,6 +68,8 @@ GEM
     eventmachine (1.0.8)
     execjs (2.6.0)
     ffi (1.9.10)
+    font-awesome-middleman (4.4.1)
+      middleman-core (~> 3.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -209,6 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  font-awesome-middleman
   middleman (= 3.4.0)
   middleman-livereload (~> 3.4.3)
   middleman3-sassc (~> 0.0.1)

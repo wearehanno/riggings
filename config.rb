@@ -8,7 +8,8 @@ compass_config do |config|
 
   # TODO: PICKFRAMEWORK: Choose the one you want, and comment out the other one
   # Foundation
-  config.add_import_path "bower_components"
+  # config.add_import_path "bower_components"
+  # config.add_import_path "bower_components/foundation-sites/scss"
   # Bootstrap
   # config.add_import_path "bower_components/bootstrap-sass-official/assets"
 
@@ -71,6 +72,7 @@ activate :directory_indexes
 set :build_dir, "build"
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
+set :fonts_dir,  "assets/fonts"
 set :images_dir, 'assets/images'
 
 configure :development do
@@ -91,4 +93,8 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  # FIXME: zurb-foundation currently includes this file in their bower_component
+  # but the build task chokes on it: https://github.com/zurb/foundation-sites/issues/7419
+  ignore '/bower_components/foundation-sites/foundation-sites.*'
 end

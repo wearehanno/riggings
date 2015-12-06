@@ -80,7 +80,11 @@ end
 set :build_dir, "build"
 
 configure :build do
-  # TODO: need to auto-prefix Sass on build
+  # Auto-prefix the CSS when we build it, via middleman-autoprefixer gem
+  # Options are here: https://github.com/middleman/middleman-autoprefixer
+  activate :autoprefixer do |config|
+    config.browsers = ['last 2 versions', 'Explorer >= 9']
+  end
 
   # Use relative URLs
   # activate :relative_assets

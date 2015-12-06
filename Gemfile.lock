@@ -37,6 +37,9 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    autoprefixer-rails (6.0.3)
+      execjs
+      json
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -99,6 +102,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-autoprefixer (2.6.1)
+      autoprefixer-rails (~> 6.0.1)
+      middleman-core (>= 3.3.3)
     middleman-core (3.4.0)
       activesupport (~> 4.1)
       bundler (~> 1.1)
@@ -213,6 +219,7 @@ PLATFORMS
 DEPENDENCIES
   font-awesome-middleman
   middleman (= 3.4.0)
+  middleman-autoprefixer
   middleman-livereload (~> 3.4.3)
   middleman3-sassc (~> 0.0.1)
   ruby18_source_location

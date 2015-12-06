@@ -3,7 +3,21 @@ title: TODO Welcome to Riggings
 ---
 
 <div class="row column text-center">
-  <h1>Let's start Rigging! <i class="fa fa-heart"></i></h1>
+  <h1>
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-rocket fa-stack-1x"></i>
+      <i class="fa fa-circle-thin fa-stack-2x"></i>
+    </span>
+  </h1>
+  <h1>Let's start Rigging!</h1>
   <p>Well, this might look artocious, but we wanted a nice, clean template to kick off with, and that's what we've got!</p>
-  <a href="#" class="button success">Here's a button</a>
+  <a class="button success" data-open="examplemodal">Fire a modal</a>
+
+  <div class="reveal" id="examplemodal" data-reveal data-animation-in="spin-in" data-animation-out="spin-out">
+    <h1>This is a modal.</h1>
+    <p>Customise the animation-in using motion-ui</p>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 </div>

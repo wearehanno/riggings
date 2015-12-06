@@ -5,7 +5,7 @@
   "TODO PICKFRAMEWORK Instructions": {
     "Take one of the next 2 lines": "and add it to the 'dependencies' list immediately below, depending on which one you want to use",
     "foundation-sites": "~6.0.5",
-    "bootstrap-sass-official": "~3.2.0"
+    "bootstrap-sass": "~3.3.6"
   },
   "dependencies": {
     "foundation-sites": "~6.0.5",

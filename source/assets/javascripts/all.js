@@ -8,14 +8,16 @@
 
 //= require jquery/dist/jquery
 
-// TODO: PICKFRAMEWORK: Remove the one you don't want
-
 // ----- FOUNDATION
+// TODO: PICKFRAMEWORK: Remove the next few lines if you don't use Foundation
 //= require what-input/what-input.js
+// NOTE: For final build, you should modify this to only include foundation.core.js
+// and the plugins you're actually using
 //= require foundation-sites/dist/foundation.js
 
 // ----- BOOTSTRAP
-// require bootstrap-sass-official/assets/javascripts/bootstrap.js
+// TODO: PICKFRAMEWORK: Enable this if you want to use Boostrap
+// require bootstrap-sass/assets/javascripts/bootstrap.js
 
 // ----- GLOBAL APP JS
 // Use this file for anything that needs to be accessible on every page of the site

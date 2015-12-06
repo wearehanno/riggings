@@ -4,22 +4,16 @@
 
 # Change Compass configuration
 compass_config do |config|
-  # Require any additional compass plugins here.
-
-  # TODO: PICKFRAMEWORK: Choose the one you want, and comment out the other one
-  # Foundation
-  # config.add_import_path "bower_components"
-  # config.add_import_path "bower_components/foundation-sites/scss"
-  # Bootstrap
-  # config.add_import_path "bower_components/bootstrap-sass-official/assets"
-
   # Set this to the root of your project when deployed:
   config.http_path = "/"
+
   config.css_dir = "assets/stylesheets"
   config.sass_dir = "assets/stylesheets"
   config.images_dir = "assets/images"
   config.fonts_dir = "assets/fonts"
   config.javascripts_dir = "assets/javascripts"
+
+  # Require any additional compass plugins here.
 end
 
 # SassC compilation for styles

@@ -59,13 +59,13 @@ If you want to run tests before deploying to Netlify, you can use a CI server li
 
 Yup, we feel that way sometimes, too. Riggings is set up for Foundation but can easily be switched to Bootstrap.
 
-Search in this repo for `PICKFRAMEWORK`. There are sections in 6 files, which you'll need to modify. Even if you want to stick with Foundation, you should still follow these steps just to remove the Bootstrap references so that you have a clean repository:
+Search in this repo for `PICKFRAMEWORK`. There are sections in several files, which you'll need to modify. Even if you want to stick with Foundation, you should still follow these steps just to remove the Bootstrap references so that you have a clean repository:
 
 1. In `bower.json`, choose the framework you need and copy it into the dependencies
-2. In `config.rb` adjust the `config.add_import_path`
-3. In `all.js` change the framework JS file being included
-4. In `app.js` remove the Foundation initialisation at `$(document).foundation();`
-5. In `app.css.scss`, there are a few lines at the top to import the Sass components
+2. In `config.rb` include the `config.add_import_path` for Bootstrap, if you want it
+3. In `source/assets/javascripts/all.js` change the framework JS file being included
+4. In `source/assets/javascripts/_app.js.coffee` remove the Foundation initialisation at `$(document).foundation();`
+5. In `source/assets/stylesheets/all.scss`, you'll need to switch the vendor/foundation include for the vendor/bootstrap one instead
 
 Then, when you're done, we need to change the framework via Bower:
 

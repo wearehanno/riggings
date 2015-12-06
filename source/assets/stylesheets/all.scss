@@ -6,8 +6,10 @@
 
 
 // CSS FRAMEWORK
+// TODO: PICKFRAMEWORK: Choose the framework you want, and delete the other one
 // =======================================
 @import "vendor/foundation";
+// @import "vendor/bootstrap";
 
 
 // OTHER PLUGINS
@@ -16,6 +18,7 @@
 
 @import "vendor/motion-ui";
 @import "vendor/fontawesome";
+
 
 // REGULAR STYLES
 // These should be used regardless of which framework you pick

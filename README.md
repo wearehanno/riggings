@@ -3,9 +3,11 @@ The Riggings
 
 ![https://travis-ci.org/wearehanno/riggings](https://travis-ci.org/wearehanno/riggings.svg?branch=master)
 
-Prototype fast, and deploy to a server for feedback and staging! This is the internal repo we use at [Hanno](http://hanno.co/) for rapid prototyping using [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/) and hosted on [Netlify](https://www.netlify.com/).
+Riggings is the internal framework we use at [Hanno](http://hanno.co/) for rapid prototyping apps and websites. The goal is to have a clickable prototype online within 5 minutes of cloning this repository :rocket:
 
-To see what the default page looks like, check out [hanno-riggings.netlify.com](http://hanno-riggings.netlify.com/).
+It includes [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/), a bunch of helpful components, and is set up to deploy to [Netlify](https://www.netlify.com/). Riggings is  an _opinionated_ framework and is designed to suit the way we work and deploy sites.
+
+To see what the default (very basic) page looks like, check out [hanno-riggings.netlify.com](http://hanno-riggings.netlify.com/).
 
 ## Quickstart
 
@@ -22,21 +24,25 @@ To see what the default page looks like, check out [hanno-riggings.netlify.com](
 
 ## Deploying it to Netlify
 
-We used to deploy this site to a regular Linux server, but it was too much hassle. Purpose built static site hosting services like [Netlify](https://www.netlify.com/) are a much better option.
+We used to deploy staging sites server, but it was too much hassle. We've settled on [Netlify](https://www.netlify.com/) because it makes our life far easier and takes care of the grunt work for us.
 
-1. Go to Netlify and connect your GitHub account, then select the repository you'd like to deploy
-2. In the settings modal, choose which branch you'd like to deploy and leave the **Directory** set to `/build`.
-3. In the **Build Command** field, enter `npm run build`.
+1. Go to [Netlify](https://www.netlify.com/) and connect your GitHub account. Select the repository you'd like to deploy.
+2. In the **settings** modal
+  - choose which branch you'd like to deploy
+  - leave the **Directory** set to `/build`.
+3. In the **Build Command** field, enter `rake build`.
 
 Feel free to set up a password to protect the build and give it a custom URL.
 
-_Netlify automatically looks for `package.json` files, `.gemfiles` and `bower.json`, so there's very little that we actually need to set up.  This build command will run the `build` task configured in the [`package.json`](./package.json)._
+_Netlify automatically looks for `.gemfiles` and the `bower.json`, and runs them, so there's very little that we actually need to set up._
 
 
 ## Optionally, configure notifications and connectors
 
-Keep clients and team members updated at every step of the process. We use Slack massively, and pipe lots of notifications into a project room where our team and clients can discuss things. Check out the [Netlify Webhooks documentation](https://www.netlify.com/docs/webhooks) for details.
+Keep clients and team members updated at every step of the process. We live inside Slack, and pipe lots of notifications into a project room where our team and clients can discuss things. Check out the [Netlify Webhooks documentation](https://www.netlify.com/docs/webhooks) for details (takes 2 minutes to configure).
 
+
+# Additional configuration and notes
 
 ## Running Tests
 
@@ -44,7 +50,6 @@ This repository is already running through [Travis](https://travis-ci.org) to ma
 
 You can easily add tests by modifying the `:test` command inside the [`Rakefile`](./Rakefile).
 
-# Extra Stuff
 
 ## Switching the frontend framework to Bootstrap
 

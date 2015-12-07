@@ -1,7 +1,11 @@
 The Riggings
 =================
 
+![https://travis-ci.org/wearehanno/riggings](https://travis-ci.org/wearehanno/riggings.svg?branch=master)
+
 Prototype fast, and deploy to a server for feedback and staging! This is the internal repo we use at [Hanno](http://hanno.co/) for rapid prototyping using [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/) and hosted on [Netlify](https://www.netlify.com/).
+
+To see what the default page looks like, check out [hanno-riggings.netlify.com](http://hanno-riggings.netlify.com/).
 
 ## Quickstart
 
@@ -13,10 +17,8 @@ Prototype fast, and deploy to a server for feedback and staging! This is the int
 
 ### Initialise the app
 
-1. `rake start`
+1. Run `rake start`. If you have any issues with this, visit the `Rakefile` in this repo and try running each of the commands individually. For example, take `system("bower prune")` and type `bower prune` into the console.
 2. Then go to [http://localhost:4567/](http://localhost:4567/)
-
-_If you have any issues with the `rake start`, visit the `Rakefile` in this repo and try running each of the commands individually. For example, take `system("bower prune")` and type `bower prune` into the console._
 
 ## Deploying it to Netlify
 

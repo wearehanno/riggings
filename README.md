@@ -13,14 +13,10 @@ Prototype fast, and deploy to a server for feedback and staging! This is the int
 
 ### Initialise the app
 
-1. `bower install` to install web package dependencies for the project
-2. `bundle install` to install Ruby gems (including Middleman)
+1. `rake start`
+2. Then go to [http://192.168.0.4:4567/](http://192.168.0.4:4567/)
 
-Then start the local server:
-
-1. `middleman s` to start the Middleman server
-2. Go to [http://192.168.0.4:4567/](http://192.168.0.4:4567/)
-
+_If you have any issues with the `rake start`, visit the `Rakefile` in this repo and try running each of the commands individually. For example, take `system("bower prune")` and type `bower prune` into the console._
 
 ## Deploying it to Netlify
 

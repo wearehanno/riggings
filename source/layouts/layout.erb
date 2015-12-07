@@ -10,6 +10,7 @@
 
   <body class="<%= page_classes %>">
 
+    <!-- TODO: Build a proper navigation once you start prototyping -->
     <nav class="hack-nav">
       <%= link_to_page "Home", "/" %>
       <%= link_to_page "About", "about" %>
@@ -18,7 +19,16 @@
 
     <hr>
 
-    <%= yield %>
+    <!-- TODO: Remove this column wrap -->
+    <div class="row column text-center">
+      <%= yield %>
+    </div>
+
+    <hr>
+
+    <div class="row column text-center">
+      Build by <a href="https://hanno.co">Hanno</a>
+    </div>
 
     <%= javascript_include_tag  "all" %>
   </body>

@@ -22,7 +22,6 @@ activate :sassc
 activate :directory_indexes
 
 # Add bower's directory to sprockets asset path
-# TODO: Fix this up and get it working seamlessly
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join "#{root}", @bower_config["directory"]

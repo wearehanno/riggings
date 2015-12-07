@@ -6,9 +6,10 @@ def link_to_page name, url
 
   if path == 'index.html' and url =="/"
     current = true
+    url == ""
   end
 
   class_name = current ? ' class="active"' : ''
 
-  "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
+  "<li#{class_name}><a href=\"/#{url}\">#{name}</a></li>"
 end

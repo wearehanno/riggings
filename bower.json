@@ -2,8 +2,7 @@
   "name": "riggings",
   "version": "0.0.1",
   "private": "true",
-  "TODO PICKFRAMEWORK Instructions": {
-    "Take one of the next 2 lines": "and add it to the 'dependencies' list immediately below, depending on which one you want to use",
+  "TODO PICKFRAMEWORK Instructions - Take one of the next 2 lines": "and add it to the 'dependencies' list immediately below, depending on which one you want to use": {
     "foundation-sites": "~6.0.5",
     "bootstrap-sass": "~3.3.6"
   },

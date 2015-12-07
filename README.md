@@ -17,7 +17,7 @@ To see what the default page looks like, check out [hanno-riggings.netlify.com](
 
 ### Initialise the app
 
-1. Run `rake start`. If you have any issues with this, visit the `Rakefile` in this repo and try running each of the commands individually. For example, take `system("bower prune")` and type `bower prune` into the console.
+1. Run `rake start`. If you have any issues with this, visit the [`Rakefile`](./Rakefile) in this repo and try running each of the commands individually. For example, take `system("bower prune")` and type `bower prune` into the console.
 2. Then go to [http://localhost:4567/](http://localhost:4567/)
 
 ## Deploying it to Netlify
@@ -40,37 +40,24 @@ Keep clients and team members updated at every step of the process. We use Slack
 
 ## Running Tests
 
-If you want to run tests before deploying to Netlify, you can use a CI server like [Travis](https://travis-ci.org). If you want to do ths, you'll need to run commands in this sort of sequence:
+This repository is already running through [Travis](https://travis-ci.org) to make sure the `middleman build` completes properly. You should do this for your own project too, before deploying.
 
-	# Prepare the test server
-	rvm use 2.2.1
-	bundle install
-	npm install -g bower
-	bower install
-
-	# Run the build to see if it works. Insert your tests here too
-	middleman build
+You can easily add tests by modifying the `:test` command inside the [`Rakefile`](./Rakefile).
 
 # Extra Stuff
 
 ## Switching the frontend framework to Bootstrap
 
-Yup, we feel that way sometimes, too. Riggings is set up for Foundation but can easily be switched to Bootstrap.
+Yup, sometimes a different framework is a better bet. Riggings is set up for Foundation but can easily be switched to Bootstrap.
 
 Search in this repo for `PICKFRAMEWORK`. There are sections in several files, which you'll need to modify. Even if you want to stick with Foundation, you should still follow these steps just to remove the Bootstrap references so that you have a clean repository:
 
 1. In `bower.json`, choose the framework you need and copy it into the dependencies
-2. In `config.rb` include the `config.add_import_path` for Bootstrap, if you want it
-3. In `source/assets/javascripts/all.js` change the framework JS file being included
-4. In `source/assets/javascripts/_app.js.coffee` remove the Foundation initialisation at `$(document).foundation();`
-5. In `source/assets/stylesheets/all.scss`, you'll need to switch the vendor/foundation include for the vendor/bootstrap one instead
+2. In `source/assets/javascripts/all.js` change the framework JS file being included
+3. In `source/assets/javascripts/_app.js.coffee` remove the Foundation initialisation at `$(document).foundation();`
+4. In `source/assets/stylesheets/all.scss`, you'll need to switch the vendor/foundation include for the vendor/bootstrap one instead
 
-Then, when you're done, we need to change the framework via Bower:
-
-	# Remove the unused bower components
-	$ bower prune
-	# Install the new ones
-	$ bower install
+Then, when you're done, run `rake start` as usual.
 
 And finally, don't forget to update the `source/layouts/layout.erb` file and other pages like `source/index.html.erb` to remove the Foundation-specific HTML grid and components.
 
@@ -88,3 +75,7 @@ Then create a new project using zurb-foundation template.
 1. `$ middleman init my_new_project --template=riggings`
 2. `$ cd my_new_project`
 3. `$ rm -rf -- .git` to delete the template's git repo, which is copied into this repo too, and you won't want it
+
+##Asset minification
+
+Middleman can do this by itself (and it does it very well, in fact), but we prefer to allow Netlify to handle this for us, so that we're not doing double-minification, and also to keep things simpler at our end. This is why we're not using Middleman's inbuilt asset hashing on URLs, too.

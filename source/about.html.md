@@ -1,5 +1,5 @@
 ---
-title: 404
+title: About Page
 ---
 
 #This is an about page

@@ -7,7 +7,7 @@ Riggings is the internal framework we use at [Hanno](http://hanno.co/) for rapid
 
 It includes [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/), a bunch of helpful components, and is set up to deploy to [Netlify](https://www.netlify.com/). Riggings is  an _opinionated_ framework and is designed to suit the way we work and deploy sites.
 
-To see what the default (very basic) page looks like, check out [hanno-riggings.netlify.com](http://hanno-riggings.netlify.com/).
+To see what the default (very basic) page looks like, check out this repository deployed to Netlify at [hanno-riggings.netlify.com](http://riggings.hanno.co/).
 
 ## Quickstart
 

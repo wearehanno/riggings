@@ -16,10 +16,8 @@ compass_config do |config|
   # Require any additional compass plugins here.
 end
 
-# SassC compilation for styles
-activate :sassc
-
 activate :directory_indexes
+activate :sassc # SassC compilation for styles
 
 # Add bower's directory to sprockets asset path
 after_configuration do
@@ -79,11 +77,18 @@ configure :build do
     config.browsers = ['last 2 versions', 'Explorer >= 9']
   end
 
-  # Use relative URLs
-  # activate :relative_assets
+  # We need this for Netlify, but the after_build stuff may be deprecated when upgrading to Middleman v4
+  after_build do |builder|
+    src = File.join(config[:source],"_redirects")
+    dst = File.join(config[:build_dir],"_redirects")
+    builder.source_paths << File.dirname(__FILE__)
+    builder.copy_file(src,dst)
 
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+    src = File.join(config[:build_dir],"404/index.html")
+    dst = File.join(config[:build_dir],"404.html")
+    builder.source_paths << File.dirname(__FILE__)
+    builder.copy_file(src,dst)
+  end
 
   # FIXME: zurb-foundation currently includes this file in their bower_component
   # but the build task chokes on it: https://github.com/zurb/foundation-sites/issues/7419

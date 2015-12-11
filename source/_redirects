@@ -1,0 +1,5 @@
+# This is a redirects file configured to work with Netlify
+# See more at https://www.netlify.com/docs/redirects
+
+/todowithstring/*       https://google.com/:splat/
+/todo                   http://google.com

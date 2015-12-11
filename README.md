@@ -26,7 +26,7 @@ To see what the default (very basic) page looks like, check out this repository 
 
 ## Deploying it to Netlify
 
-We used to deploy staging sites server, but it was too much hassle. We've settled on [Netlify](https://www.netlify.com/) because it makes our life far easier and takes care of the grunt work for us.
+We used to deploy staging sites to a Linux server, but it was too much hassle. We've settled on [Netlify](https://www.netlify.com/) because it makes our life far easier and takes care of the grunt work for us.
 
 1. Go to [Netlify](https://www.netlify.com/) and connect your GitHub account. Select the repository you'd like to deploy.
 2. In the **settings** modal

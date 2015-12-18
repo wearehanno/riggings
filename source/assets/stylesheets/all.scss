@@ -3,6 +3,7 @@
 // MASTER SETTINGS AND VARIABLES
 // =======================================
 @import 'settings';
+@import "vars";
 
 
 // CSS FRAMEWORK
@@ -18,12 +19,22 @@
 // Please try to use bower_components wherever you can, to keep things maintainable
 // =======================================
 
-@import "vendor/motion-ui";
 @import "vendor/fontawesome";
+
+// Zurb's Motion UI for Foundation
+@import "vendor/motion-ui";
 
 
 // REGULAR STYLES
 // These should be used regardless of which framework you pick
 // =======================================
 
+@import "typography";
+@import "globals";
+
+@import "app";
+@import "ui";
+@import "images";
+
+@import "utilities";
 @import "hacks";

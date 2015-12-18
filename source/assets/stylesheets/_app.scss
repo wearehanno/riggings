@@ -1,0 +1,17 @@
+
+// Main app stylesheet
+// =======================================
+
+// TODO: Table of Contents
+
+
+// Links
+// =======================================
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: lighten($primary-color, 10%);
+  }
+}

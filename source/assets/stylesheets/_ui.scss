@@ -1,0 +1,54 @@
+
+// Buttons
+// =======================================
+
+.button {
+  // font-family: $header-font-family;
+  // font-weight: 400;
+  color: #fff;
+  background: $primary-color;
+  border-radius: $radius;
+  transition: all 0.06s linear;
+
+  &:hover {
+    transition: all 0.06s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: #fff;
+    background: darken($primary-color, 8%);
+  }
+}
+
+// =======================================
+
+
+// Form elements
+// =======================================
+
+// General input styles
+[type="text"],
+[type="password"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="email"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea {
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+// =======================================

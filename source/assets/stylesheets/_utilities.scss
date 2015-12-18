@@ -1,0 +1,86 @@
+
+// Perfectly align elements horizontally or vertically inside their container
+// =======================================
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translate3D(0, -50%, 0);
+}
+
+@mixin horizontal-align($position: relative) {
+  position: $position;
+  left: 50%;
+  transform: translate3D(-50%, 0, 0);
+}
+
+// HTML-driven approach (good for rapid prototyping):
+// Apply .v-align or .h-align to an HTML element that you're centering
+.v-align {
+  @include vertical-align();
+}
+
+.h-align {
+  @include horizontal-align();
+}
+
+// CSS-driven approach:
+// Use alignment mixin with any CSS element, but always set width for it
+// Otherwise it will span 100% of the parent element's width
+.some-class {
+  @include vertical-align();
+  width: 80%;
+}
+
+// =======================================
+
+
+// Vertical Push
+// (adding top, bottom or both margins to it, with simple classes)
+// =======================================
+
+.push-up {
+  margin-top: $v-spacing;
+
+  @include breakpoint(large) {
+    margin-top: $v-spacing / 1.5;
+  }
+}
+
+  .push-up-high {
+    margin-top: $v-spacing * 1.5;
+
+    @include breakpoint(large) {
+      margin-top: $v-spacing * 2;
+    }
+  }
+
+.push-down {
+  margin-bottom: $v-spacing;
+
+  @include breakpoint(large) {
+    margin-bottom: $v-spacing / 1.5;
+  }
+}
+
+  .push-down-low {
+    margin-bottom: $v-spacing * 1.5;
+
+    @include breakpoint(large) {
+      margin-bottom: $v-spacing * 2;
+    }
+  }
+
+// =======================================
+
+
+// An orphan text element at the end of a content block that needs nice spacing around it
+// =======================================
+
+.bottom-feeder {
+  margin-top: $v-spacing * 2;
+
+  @include breakpoint(large) {
+    margin-top: $v-spacing * 1.5;
+  }
+}

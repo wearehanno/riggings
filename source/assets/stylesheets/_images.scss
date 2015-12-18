@@ -1,0 +1,53 @@
+
+// RESPONSIVE IMAGES
+// TODO: Needs bulletproof solution with Foundation's new plugin for clever asset loading
+// =======================================
+
+.fluid-image {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 95%;
+
+  @include breakpoint(medium) {
+    max-width: 90%;
+  }
+}
+
+// =======================================
+
+
+// CIRCULAR AVATARS (big and small)
+// =======================================
+
+.avatar {
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 60px;
+
+  @include breakpoint(medium) {
+    max-width: 90px;
+  }
+
+  @include breakpoint(large) {
+    max-width: 120px;
+  }
+}
+
+  .avatar--mini {
+    max-width: 40px;
+
+    @include breakpoint(medium) {
+      max-width: 45px;
+    }
+
+    @include breakpoint(large) {
+      max-width: 50px;
+    }
+  }
+
+  .text-center .avatar {
+    margin-left: auto;
+    margin-right: auto;
+  }

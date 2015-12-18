@@ -15,21 +15,27 @@
       <%= link_to_page "Home", "/" %>
       <%= link_to_page "About", "about" %>
       <%= link_to_page "Contact", "contact" %>
+      <%= link_to_page "Demo", "demo" %>
     </nav>
 
     <hr>
 
-    <!-- TODO: Remove this column wrap -->
-    <div class="row column text-center">
+    <!-- Main Content -->
+    <!-- TODO: text-center class is here for presentational purposes of this demo site -->
+    <div class="main-content text-center">
       <%= yield %>
     </div>
 
     <hr>
 
-    <div class="row column text-center">
-      Built by <a href="https://hanno.co">Hanno</a>
-    </div>
+    <footer>
+      <div class="text-center">
+        <p>Built by <a href="https://hanno.co">Hanno</a></p>
+        <p>TODO: link to GitHub</p>
+      </div>
+    </footer>
 
     <%= javascript_include_tag  "all" %>
+
   </body>
 </html>

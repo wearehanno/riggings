@@ -1,0 +1,31 @@
+
+// BASIC TYPOGRAPHY RULES
+// =======================================
+
+
+// =======================================
+
+
+// RESPONSIVE TYPOGRAPHY
+// =======================================
+
+
+// Nice big headline that adapts to screen width and doesn't need containers
+// Use when default grid cramps up your headlines and they suffer from awkward line breaks
+.fluid-headline {
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(medium) {
+    max-width: 75vw;
+  }
+
+   @include breakpoint(large) {
+    max-width: 70vw;
+  }
+
+  @include breakpoint(xlarge) {
+    max-width: 60vw;
+  }
+}

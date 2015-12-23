@@ -93,4 +93,5 @@ configure :build do
   # FIXME: zurb-foundation currently includes this file in their bower_component
   # but the build task chokes on it: https://github.com/zurb/foundation-sites/issues/7419
   ignore '/bower_components/foundation-sites/foundation-sites.*'
+  ignore '/bower_components/**/*.md'
 end

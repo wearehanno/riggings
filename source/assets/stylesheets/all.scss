@@ -27,9 +27,19 @@
 
 // REGULAR STYLES
 // These should be used regardless of which framework you pick
+
+// TODO: We've disabled some chunks of styles to keep the basic Riggings styles
+// simple as that's not often required for the purposes of quick prototypes.
+// Uncomment to enable them as your prototype requires, they're pretty cool.
 // =======================================
 
+// Simplified version of _animate.scss by Dan Eden, only a few basic animation
+// presents that we've found to be most commonly used
+// @import "animation";
+
+// Responsive typography system
 @import "typography";
+
 @import "globals";
 
 @import "app";
@@ -37,4 +47,9 @@
 @import "images";
 
 @import "utilities";
+@import "colorinvert";
+
 @import "hacks";
+
+// TODO: You might want to get rid when you get to work on your own stuff ;)
+@import "page_demo";

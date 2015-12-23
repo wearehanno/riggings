@@ -1,0 +1,11 @@
+
+// We recommend splitting up your stylesheets into page-specific chunks
+// _page_home.scss, _page_about.scss etc
+
+.hero--demo {
+  background: url(https://netlify.scdn4.secure.raxcdn.com/assets/images/photos/71f376583006315899b062a207915ce885292800/banner_03.jpg) center center no-repeat;
+  background-size: cover;
+
+  @include background-tint(rgba($primary-color, 0.4));
+  @include background-tint(linear-gradient(to bottom, rgba($primary-color, 0.4), rgba($primary-color, 0.6)));
+}

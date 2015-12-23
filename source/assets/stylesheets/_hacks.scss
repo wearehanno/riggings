@@ -2,15 +2,19 @@
 // This is where we drop WIP code while prototyping. It should be cleaned up
 // and removed once work is done.
 
-.fake-logo {
-  font-size: 800%;
-  font-weight: bold;
-  color: $brand-color;
-}
-
 .hack-nav {
+  overflow: auto;
+  margin: 0;
+  padding: ($v-spacing / 2) 0;
   text-align: center;
-  margin-top: $v-spacing / 2;
+  border-bottom: 1px solid #eee;
+
+  ul {
+    clear: both;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
 
   li {
     list-style: none;
@@ -21,4 +25,24 @@
   .active a {
     text-decoration: underline;
   }
+}
+
+.hack-logo {
+  float: left;
+  margin-left: $h-spacing;
+}
+
+.gh-link {
+  float: right;
+  margin-right: $h-spacing;
+}
+
+.hack-logo,
+.gh-link {
+  font-weight: 600;
+}
+
+.land-down-under {
+  padding: ($v-spacing / 2) 0;
+  border-top: 1px solid #eee;
 }

@@ -12,26 +12,35 @@
 
     <!-- TODO: Build a proper navigation once you start prototyping -->
     <nav class="hack-nav">
-      <%= link_to_page "Home", "/" %>
-      <%= link_to_page "About", "about" %>
-      <%= link_to_page "Contact", "contact" %>
-      <%= link_to_page "Demo", "demo" %>
-    </nav>
 
-    <hr>
+      <!-- TODO HANNO: Add a Ruby helper to simplify this markup -->
+      <!-- <a class="logo" href="/">
+        <img src="/media/logo.svg" onerror="this.onerror=null; this.src='/media/logo.png'">
+      </a> -->
+
+      <a class="hack-logo" href="/" title="Riggings">Riggings</a>
+
+      <ul class="inline-list">
+        <%= link_to_page "Home", "/" %>
+        <%= link_to_page "About", "about" %>
+        <%= link_to_page "Demo", "demo" %>
+      </ul>
+
+      <a class="gh-link" href="https://github.com/wearehanno/riggings"><i class="fa fa-github"></i> Github</a>
+
+    </nav>
 
     <!-- Main Content -->
     <!-- TODO: text-center class is here for presentational purposes of this demo site -->
+
+    <!-- TODO:  Could we use <main> ? -->
     <div class="main-content text-center">
       <%= yield %>
     </div>
 
-    <hr>
-
-    <footer>
+    <footer class="land-down-under">
       <div class="text-center">
         <p>Built by <a href="https://hanno.co">Hanno</a></p>
-        <p>TODO: link to GitHub</p>
       </div>
     </footer>
 

@@ -1,0 +1,35 @@
+
+// Assuming the default style of the website is dark type on light background,
+// .color-invert class flips that contrast for all content inside element which
+// it is added to.
+
+.color-invert {
+  color: #ddd;
+
+  h1,
+  h2 {
+    color: #fff;
+  }
+
+  h3,
+  h4 {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  h5,
+  h6,
+  p {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+}

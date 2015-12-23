@@ -1,4 +1,48 @@
 
+.inline-list {
+  margin-left: 0;
+  list-style: none;
+
+  li {
+    float: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0 1.25rem 0 0;
+  }
+}
+
+
+// Add colour tint to an element with photo-background, DRY way
+// =======================================
+
+// In your CSS declaration:
+// .element {
+//    background: url(...);
+//    @include background-tint(rgba($primary-color, 0.2));
+// }
+
+@mixin background-tint($tint) {
+  position: relative;
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: $tint;
+  }
+}
+
+
 // Perfectly align elements horizontally or vertically inside their container
 // =======================================
 
@@ -40,47 +84,39 @@
 // =======================================
 
 .push-up {
-  margin-top: $v-spacing;
+  margin-top: $v-spacing / 2;
 
+  // Boostrap: @media screen and (min-width: $screen-lg) {
   @include breakpoint(large) {
-    margin-top: $v-spacing / 1.5;
+    margin-top: $v-spacing;
   }
 }
 
   .push-up-high {
-    margin-top: $v-spacing * 1.5;
+    margin-top: $v-spacing;
 
+    // Boostrap: @media screen and (min-width: $screen-lg) {
     @include breakpoint(large) {
-      margin-top: $v-spacing * 2;
+      margin-top: $v-spacing * 1.5;
     }
   }
 
 .push-down {
-  margin-bottom: $v-spacing;
+  margin-bottom: $v-spacing / 2;
 
+  // Boostrap: @media screen and (min-width: $screen-lg) {
   @include breakpoint(large) {
-    margin-bottom: $v-spacing / 1.5;
+    margin-bottom: $v-spacing;
   }
 }
 
   .push-down-low {
-    margin-bottom: $v-spacing * 1.5;
+    margin-bottom: $v-spacing;
 
+    // Boostrap: @media screen and (min-width: $screen-lg) {
     @include breakpoint(large) {
-      margin-bottom: $v-spacing * 2;
+      margin-bottom: $v-spacing * 1.5;
     }
   }
 
 // =======================================
-
-
-// An orphan text element at the end of a content block that needs nice spacing around it
-// =======================================
-
-.bottom-feeder {
-  margin-top: $v-spacing * 2;
-
-  @include breakpoint(large) {
-    margin-top: $v-spacing * 1.5;
-  }
-}

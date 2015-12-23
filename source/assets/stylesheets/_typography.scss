@@ -2,6 +2,41 @@
 // BASIC TYPOGRAPHY RULES
 // =======================================
 
+html {
+  font-size: 100%;
+}
+
+p,
+li {
+  margin-bottom: 0.375em;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    margin-bottom: 0.5em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    margin-bottom: 0.6125em;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  line-height: 1;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    line-height: 1.1;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    line-height: 1.2;
+  }
+}
 
 // =======================================
 
@@ -9,23 +44,128 @@
 // RESPONSIVE TYPOGRAPHY
 // =======================================
 
+body {
+  font-size: 0.875em;
+  line-height: 1.4;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+    // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 1.125em;
+    line-height: 1.6;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 3.5em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 4.5em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 2.75em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 3.5em;
+  }
+}
+
+h3 {
+  font-size: 1.625em;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 2.125em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 2.625em;
+  }
+}
+
+h4 {
+  font-size: 1.375em;
+  font-weight: 500;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 1.75em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 2.125em;
+  }
+}
+
+h5 {
+  font-size: 1.125em;
+  font-weight: 400;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 1.325em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 1.525em;
+  }
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 300;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 1.125em;
+  }
+
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 1.25em;
+  }
+}
+
 
 // Nice big headline that adapts to screen width and doesn't need containers
 // Use when default grid cramps up your headlines and they suffer from awkward line breaks
 .fluid-headline {
+  max-width: 90%;
   max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
 
+  // Boostrap: @media screen and (min-width: $screen-md) {
   @include breakpoint(medium) {
+    max-width: 75%;
     max-width: 75vw;
   }
 
-   @include breakpoint(large) {
+  // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    max-width: 70%;
     max-width: 70vw;
-  }
-
-  @include breakpoint(xlarge) {
-    max-width: 60vw;
   }
 }

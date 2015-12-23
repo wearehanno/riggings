@@ -3,8 +3,7 @@
 // =======================================
 
 .button {
-  // font-family: $header-font-family;
-  // font-weight: 400;
+  margin: 0;
   color: #fff;
   background: $primary-color;
   border-radius: $radius;
@@ -14,11 +13,34 @@
     transition: all 0.06s ease-out;
   }
 
+  &:active,
   &:hover,
   &:focus {
     outline: none;
     color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
     background: darken($primary-color, 8%);
+  }
+
+  &:active {
+    background: darken($primary-color, 8%);
+    box-shadow: inset 0 3px 3px 0 darken($primary-color, 16%);
+  }
+
+  font-size: 0.875em;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    font-size: 1em;
+  }
+
+    // Bootstrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    font-size: 1.125em;
   }
 }
 

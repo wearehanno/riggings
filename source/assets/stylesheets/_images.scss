@@ -8,6 +8,7 @@
   width: 100%;
   max-width: 95%;
 
+  // Boostrap: @media screen and (min-width: $screen-md) {
   @include breakpoint(medium) {
     max-width: 90%;
   }
@@ -26,10 +27,12 @@
   width: 100%;
   max-width: 60px;
 
+  // Boostrap: @media screen and (min-width: $screen-md) {
   @include breakpoint(medium) {
     max-width: 90px;
   }
 
+  // Boostrap: @media screen and (min-width: $screen-lg) {
   @include breakpoint(large) {
     max-width: 120px;
   }
@@ -38,10 +41,12 @@
   .avatar--mini {
     max-width: 40px;
 
+    // Boostrap: @media screen and (min-width: $screen-md) {
     @include breakpoint(medium) {
       max-width: 45px;
     }
 
+    // Boostrap: @media screen and (min-width: $screen-lg) {
     @include breakpoint(large) {
       max-width: 50px;
     }

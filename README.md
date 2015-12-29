@@ -21,7 +21,7 @@ To see what the default (very basic) page looks like, check out this repository 
 
 ### Initialise the app
 
-1. Run `rake start`. If you have any issues with this, visit the [`Rakefile`](./Rakefile) in this repo and try running each of the commands individually. For example, take `system("bower prune")` and type `bower prune` into the console.
+1. Run `rake start`. If you have any issues with this, visit the [`Rakefile`](./Rakefile) in this repo and try running each of the commands individually. For example, take `system("middleman server")` and type `middleman server` into the console.
 2. Then go to [http://localhost:4567/](http://localhost:4567/)
 
 ## Deploying it to Netlify

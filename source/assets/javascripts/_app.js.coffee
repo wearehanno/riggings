@@ -7,4 +7,7 @@
 # Initialise Foundation
 $(document).foundation()
 
+# WOW plugin to trigger animations on viewport entry
+new WOW().init()
+
 console.log 'app.js loaded'

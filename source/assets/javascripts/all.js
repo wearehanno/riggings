@@ -19,6 +19,9 @@
 // TODO: PICKFRAMEWORK: Enable this if you want to use Boostrap
 // require bootstrap-sass/assets/javascripts/bootstrap.js
 
+// ----- OTHER PLUGINS
+//= require wow/dist/wow
+
 // ----- GLOBAL APP JS
 // Use this file for anything that needs to be accessible on every page of the site
 //= require _app

@@ -21,9 +21,6 @@
 
 @import "vendor/fontawesome";
 
-// Zurb's Motion UI for Foundation
-@import "vendor/motion-ui";
-
 
 // REGULAR STYLES
 // These should be used regardless of which framework you pick
@@ -48,6 +45,7 @@
 
 @import "utilities";
 @import "colorinvert";
+@import "animation";
 
 @import "hacks";
 

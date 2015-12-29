@@ -83,6 +83,10 @@
     </footer>
 
     <%= javascript_include_tag  "all" %>
+    <!-- Get the page-specific scripts if any of them have been passed through -->
+    <% if content_for?(:pagescripts) %>
+      <%= yield_content :pagescripts %>
+    <% end %>
 
   </body>
 </html>

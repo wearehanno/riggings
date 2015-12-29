@@ -15,4 +15,6 @@ title: TODO Welcome to Riggings
 
 </header>
 
-<%= javascript_include_tag  "home" %>
+<% content_for :pagescripts do %>
+  <%= javascript_include_tag 'home' %>
+<% end %>

@@ -15,6 +15,9 @@ gem 'font-awesome-middleman'
 # Using this for auto-prefixing on builds (but not locally)
 gem 'middleman-autoprefixer'
 
+# Create favicon files from the image in the source directory
+gem "middleman-favicon-maker", "~> 3.7"
+
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 

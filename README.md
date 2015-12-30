@@ -18,6 +18,7 @@ To see what the default (very basic) page looks like, check out this repository 
 1. [Ruby](http://www.ruby-lang.org/en/downloads/) via [rbenv](https://github.com/sstephenson/rbenv). Check our current version inside [`.ruby-version`](./.ruby-version)
 2. [Bundler](http://bundler.io/): `gem install bundler`
 3. [Bower](http://bower.io/): `npm install -g bower`
+4. [ImageMagick](http://www.imagemagick.org/script/index.php) for image resizing for favicons: `brew install imagemagick` on OSX
 
 ### Initialise the app
 

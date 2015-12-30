@@ -5,7 +5,7 @@ The Riggings
 
 Riggings is the internal framework we use at [Hanno](http://hanno.co/) for rapid prototyping apps and websites. The goal is to have a clickable prototype online within 5 minutes of cloning this repository :rocket:
 
-It includes [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/), a bunch of helpful components, and is set up to deploy to [Netlify](https://www.netlify.com/). Riggings is  an _opinionated_ framework and is designed to suit the way we work and deploy sites.
+It includes [Middleman](https://middlemanapp.com/), [Zurb Foundation](http://foundation.zurb.com/), a bunch of helpful components, and is set up to deploy to [Netlify](https://www.netlify.com/). Riggings is an _opinionated_ framework and is designed to suit the way we work and deploy sites.
 
 Riggings is a prototyping framework, yes, but that doesn't mean it's not production-ready, especially when hosted on Netlify, which takes care of stuff like asset minification and concatenation.
 

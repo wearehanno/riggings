@@ -1,5 +1,6 @@
 ---
 title: About Page
+layout: layout__textpage
 ---
 
 #This is an about page

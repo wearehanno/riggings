@@ -28,4 +28,4 @@ bower_components
 node_modules
 
 # We don't need to track the style, since it'll be compiled on each build--on the server, too
-source/assets/stylesheets/app.css
+source/assets/stylesheets/all.css

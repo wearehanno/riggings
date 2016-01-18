@@ -4,3 +4,71 @@
 * {
   box-sizing: border-box;
 }
+
+
+// Vertical spacing for largest, top-level container elements
+// =======================================
+
+section,
+article {
+  padding: ($v-spacing / 2) 0;
+
+  // Boostrap: @media screen and (min-width: $screen-md) {
+  @include breakpoint(medium) {
+    padding: ($v-spacing / 1.5) 0;
+  }
+
+  // Boostrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    padding: $v-spacing 0;
+  }
+}
+
+header + article {
+  padding-top: 0;
+}
+
+.hero {
+  padding: $v-spacing 0;
+
+  // Boostrap: @media screen and (min-width: $screen-lg) {
+  @include breakpoint(large) {
+    padding: ($v-spacing * 2) 0;
+  }
+}
+
+  // More compact hero (less vertical spacing)
+  .hero--tight {
+
+    // Boostrap: @media screen and (min-width: $screen-lg) {
+    @include breakpoint(large) {
+      padding: $v-spacing 0;
+    }
+  }
+
+
+// Links
+// =======================================
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: lighten($primary-color, 10%);
+  }
+}
+
+// Lists
+// =======================================
+
+.inline-list {
+  margin-left: 0;
+  list-style: none;
+
+  li {
+    float: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0 1.25rem 0 0;
+  }
+}

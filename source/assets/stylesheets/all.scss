@@ -3,7 +3,6 @@
 // MASTER SETTINGS AND VARIABLES
 // =======================================
 @import 'settings';
-@import "vars";
 
 
 // CSS FRAMEWORK
@@ -36,10 +35,8 @@
 
 // Responsive typography system
 @import "typography";
-
 @import "globals";
 
-@import "app";
 @import "ui";
 @import "images";
 
@@ -47,6 +44,7 @@
 @import "colorinvert";
 @import "animation";
 
+// TODO: Clean this up before shipping your site
 @import "hacks";
 
 // TODO: You might want to get rid when you get to work on your own stuff ;)

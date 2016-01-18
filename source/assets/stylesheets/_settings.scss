@@ -1,3 +1,35 @@
+// =======================================
+// VARIABLES
+// =======================================
+
+// COLOURS
+// =======================================
+
+$brand-color: #e06316;
+$accent-color: #1b3158;
+
+// Set your framework's default primary color to be the same as brand color
+// This affects links, buttons and other elements
+$primary-color: $brand-color;
+
+
+// SPACING
+// =======================================
+
+$v-spacing: 3rem;
+$h-spacing: 2rem;
+
+
+// UI
+// =======================================
+
+$radius: 4px;
+
+
+// =======================================
+// FOUNDATION CUSTOMISATION SETTINGS
+// =======================================
+
 // TODO: Go and grab the /bower_components/foundation-sites/scss/settings/_settings.scss file
 // and drop the contents in here to start yourself off
 

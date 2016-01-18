@@ -3,7 +3,7 @@
 // _page_home.scss, _page_about.scss etc
 
 .hero--demo {
-  background: url(https://netlify.scdn4.secure.raxcdn.com/assets/images/photos/71f376583006315899b062a207915ce885292800/banner_03.jpg) center center no-repeat;
+  background: url("/assets/images/photos/banner.jpg") center center no-repeat;
   background-size: cover;
 
   @include background-tint(rgba($primary-color, 0.4));

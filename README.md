@@ -1,3 +1,6 @@
+## Caution! This repository is not actively maintained and is probably not a smart starting point for your new project.
+
+
 The Riggings
 =================
 
